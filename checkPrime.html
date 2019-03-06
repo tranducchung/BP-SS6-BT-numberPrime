@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VHTM</title>
+</head>
+<body>
+<script>
+    function checkPrime(number) {
+        let check= true;
+        if (number<2){
+            check = false;
+        }
+        for(let i=2;i<Math.sqrt(number);i++){
+            if (number%i===0){
+                check = false;
+            }
+        }
+        return check
+    }
+    let enterNumber=parseInt(prompt("Enter number you want check"));
+    let result = checkPrime(enterNumber);
+    if(result===true){
+        alert("Number "+ enterNumber + " is Prime" )
+    }else alert("Number "+ enterNumber+ " is not Prime")
+</script>
+</body>
+</html>
